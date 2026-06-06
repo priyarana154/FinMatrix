@@ -126,8 +126,7 @@ const Navbar = () => {
           <li>
             <Link
               to="/contact"
-              onClick={() => setIsOpen(false)}
-              className={mobileLinkStyle(location.pathname === "/contact")}
+              className={desktopLinkStyle(location.pathname === "/contact")}
             >
               Contact
             </Link>
