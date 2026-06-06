@@ -74,7 +74,7 @@ const Navbar = () => {
       className="w-full h-[76px] bg-white backdrop-blur-xl border-b border-slate-100 flex justify-center fixed top-0 left-0 z-50 font-['Inter'] transition-all duration-300"
     >
       <div className="w-full max-w-[1280px] px-6 flex justify-between items-center">
-         <div
+        <div
           className="flex items-center gap-2.5 cursor-pointer select-none group"
           onClick={() => navigate("/")}
         >
@@ -88,7 +88,7 @@ const Navbar = () => {
           </span>
         </div>
 
-         <ul className="hidden lg:flex items-center gap-2 text-black dark:text-white">
+        <ul className="hidden lg:flex items-center gap-2 text-black dark:text-white">
           <li>
             <Link
               to="/"
@@ -124,12 +124,13 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <a
-              href="/contact"
-              className={desktopLinkStyle(location.hash === "/contact")}
+            <Link
+              to="/contact"
+              onClick={() => setIsOpen(false)}
+              className={mobileLinkStyle(location.pathname === "/contact")}
             >
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
 
@@ -140,7 +141,6 @@ const Navbar = () => {
             {" "}
             {user ? (
               <div className="relative" ref={profileMenuRef}>
-   
                 <button
                   onClick={() => setShowUserMenu(!showUserMenu)}
                   className="flex items-center gap-2 focus:outline-none bg-transparent p-1 pr-2 transition-all"
@@ -198,7 +198,7 @@ const Navbar = () => {
               </>
             )}
           </div>
- 
+
           {!location.pathname.startsWith("/dashboard") && (
             <button
               className="lg:hidden p-1 text-slate-700"
@@ -209,7 +209,7 @@ const Navbar = () => {
           )}
         </div>
       </div>
- 
+
       <div
         className={`fixed top-[76px] left-0 w-[280px] h-[calc(100vh-76px)] bg-white border-r border-slate-100 shadow-2xl p-6 flex flex-col gap-3 lg:hidden transition-all duration-300 ease-in-out ${
           isOpen ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
