@@ -1,0 +1,24 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependencies
+node_modules/
+
+# Production build output (Jab project deploy ke liye build hota hai)
+dist/
+build/
+
+# Vite/Next.js files
+.vite/
+.local
+
+# Environment variables (Frontend ke liye bhi agar use ho rahe hon)
+.env
+.env.local
+.env.production
+
+# Editor configs (Optional, agar VS Code ki configuration hidden rakhni ho)
+.vscode/
+.idea/
