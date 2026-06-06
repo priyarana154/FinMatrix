@@ -126,7 +126,7 @@ const Navbar = () => {
           <li>
             <a
               href="/contact"
-              className={desktopLinkStyle(location.hash === "#contact")}
+              className={desktopLinkStyle(location.hash === "/contact")}
             >
               Contact
             </a>
