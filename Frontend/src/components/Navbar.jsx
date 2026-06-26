@@ -136,7 +136,7 @@ const Navbar = () => {
         {/* Right Side Controls hidden setIsOpen*/}
         <div className="flex items-center gap-4">
           {/* Auth Controls (Desktop) */}
-          <div className="flex items-center gap-3">
+          <div className="hidden lg:block text-[14px] font-semibold text-slate-600 dark:text-slate-300 hover:text-[#4f46e5] px-4 py-2 rounded-lg transition-all">
             {" "}
             {user ? (
               <div className="relative" ref={profileMenuRef}>
